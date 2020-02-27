@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<control  xmlns="http://www.askia.com/2.2.0/ADCSchema"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.askia.com/2.2.0/ADCSchema https://raw.githubusercontent.com/AskiaADX/ADXSchema/2.2.0/ADCSchema.xsd"
+          version="2.2.0"
+          askiaCompat="5.5.2">
+  <info>
+    <name>OmnibusRedirection</name>
+    <guid>ffb8d6ec-cf55-46da-a08a-291f16ec0162</guid>
+    <version>1.0.0</version>
+    <date>2020-02-27</date>
+    <description><![CDATA[Manage the redirection to child surveys for omnibus projects]]></description>
+    <company>Askia SAS</company>
+    <author><![CDATA[Mamadou Sy]]></author>
+    <site>https://www.askia.com</site>
+    <helpURL></helpURL>
+    <categories>
+      <category>General</category>
+    </categories>
+    <constraints>
+      <constraint on="questions" chapter="false" single="false" multiple="false" numeric="false" date="false" open="true" requireParentLoop="false" requireLoopDepth="0" />
+      <constraint on="controls" responseblock="true" label="false" textbox="true" checkbox="false" listbox="false" radiobutton="false" />
+      <constraint on="responses" max="*" min="*" />
+    </constraints>
+  </info>
+  <outputs defaultOutput="default">
+    <output id="default" manageLoopDepth="0">
+      <description><![CDATA[Default output]]></description>
+      <content fileName="default.html" type="html" mode="dynamic" position="placeholder" />
+      <content fileName="styles.css" type="css" mode="static" position="head" />
+      <content fileName="script.js" type="javascript" mode="dynamic" position="foot" />
+    </output>
+  </outputs>
+  <properties>
+    <category id="general" name="General">
+      <property xsi:type="standardProperty" id="questionState" name="Question with completed state" type="question" mode="static" require="true" visible="true" chapter="false" single="true" multiple="false" numeric="false" open="false" date="false">
+        <description><![CDATA[Indicates the question with the completed state in order to know when to redirect to the child survey or to go to the next page.]]></description>
+        <value></value>
+      </property>
+    </category>
+  </properties>
+</control>

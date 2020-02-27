@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Main survey</title>
+    <style>
+        body {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <h1>You should never see that</h1>
+<form action="NextQuestion.html" method="post">
+<div id="adc_1">
+    <input type="hidden" id="redirection1" name="S0" value="&lt;!DOCTYPE HTML&gt;&lt;html&gt;&lt;head&gt;&lt;meta http-equiv=&quot;refresh&quot; content=&quot;1; url=ChildSurvey.html?Action=SetIdentity&Survey=0001VYEE60Z39L2X&Intvw=878159SJ3AUFC8AK&Parameters=Action%3DDoExternalPanel%26SurveyName%3DPocOmniChild1%26Broker%3DPOC%26BrokerPanelId%3DTest012%26gender%3D2%26age%3D2%26profession%3D1&askiaidentity=false&quot;/&gt;&lt;/head&gt;&lt;body&gt;&lt;form method=&quot;post&quot; action=&quot;ChildSurvey.html?Action=DoInterview&Survey=8781B5OM7M9DL7ZY&Intvw=878159SJ3AUFC8AK&quot;&gt;&lt;input type=&quot;hidden&quot; name=&quot;Action&quot; value=&quot;SetIdentity&quot; /&gt;&lt;input type=&quot;hidden&quot; name=&quot;Survey&quot; value=&quot;0001VYEE60Z39L2X&quot; /&gt;&lt;input type=&quot;hidden&quot; name=&quot;Intvw&quot; value=&quot;878159SJ3AUFC8AK&quot; /&gt;&lt;input type=&quot;hidden&quot; name=&quot;Parameters&quot; value=&quot;Action%3DDoExternalPanel%26SurveyName%3DPocOmniChild1%26Broker%3DPOC%26BrokerPanelId%3DTest012%26gender%3D2%26age%3D2%26profession%3D1&quot; /&gt;&lt;input type=&quot;hidden&quot; name=&quot;askiaidentity&quot; id=&quot;identity&quot; /&gt;&lt;input type=&quot;hidden&quot; name=&quot;askiaresolution&quot; id=&quot;resolution&quot; /&gt;&lt;input type=&quot;hidden&quot; name=&quot;askiacapabilities&quot; id=&quot;capabilities&quot; /&gt;&lt;input type=&quot;hidden&quot; name=&quot;askiatime&quot; id=&quot;time&quot; /&gt;&lt;/form&gt;&lt;script type=&quot;text/javascript&quot;&gt;document.forms[0].submit();&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;" />
+</div>
+</form>
+
+    <script>
+        (function () {
+            "use strict";
+            setTimeout(function () {
+                const shouldRedirect = !/\?completed=/gi.test(location.href);
+                if (shouldRedirect) {
+                    const el = document.getElementById("redirection1");
+                   document.write(el.value);
+                } else {
+                 document.forms[0].submit();
+                }
+            }, 0);
+        }());
+    </script>
+</body>
+</html>
